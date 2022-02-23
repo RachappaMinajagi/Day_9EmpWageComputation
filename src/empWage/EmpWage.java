@@ -1,28 +1,18 @@
 package empWage;
 
-import java.util.Random; //import Random function
+import java.util.Random; // import Random class
 
-class utilityEmpWage{
-    Random rand = new Random();
-    public int isPresent = 1;
-    public int isAbsent = 2;
-
-    public void present() {
-        int check = rand.nextInt(2)+1;
-        if (check == isAbsent) { // condition checks for employee
-            System.out.println("Employee is absent.");
-        }
-        else {
-            System.out.println("Employee is present.");
-        }
-    }
-}
-public class EmpWage {
+public class EmpWageComputation {
 
 	public static void main(String[] args) {
-		System.out.println("Welcome To Employee Wage Computation Program");
-		utilityEmpWage empWage = new utilityEmpWage();
-                empWage.present();
-	}
+		System.out.println("Welcome to Employee Wage Computation Program");
+		Random random = new Random();
+		int r = random.nextInt(2);
+		if (r == 1)
+			//Employee Present or Absent
+			System.out.println("Employee Present");
+		else
+			System.out.println("Employee Absent");
 
+	}
 }
